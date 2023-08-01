@@ -1,7 +1,9 @@
 Smart Contract Error Handling
+
 This repository contains a simple Solidity smart contract named errorhandlingcontract that demonstrates various error handling mechanisms. The contract showcases the usage of require, revert, and assert statements to handle errors and ensure proper contract functionality.
 
 Contract Description
+
 The errorhandlingcontract contract includes the following features:
 
 State Variables:
@@ -12,6 +14,7 @@ uint256 public constant votingAge = 18: A constant representing the minimum voti
 Constructor:
 
 The constructor sets the owner variable to the address of the contract deployer (msg.sender).
+
 setValue Function:
 
 Allows the contract owner to set the value variable to a new value.
@@ -28,10 +31,14 @@ division Function:
 A pure function to calculate the division of two numbers (x divided by y) and returns the result.
 Includes an assert statement to check if y is not equal to 0.
 If y is 0, the assert will cause the transaction to revert without a specific error message.
+
 Usage
+
 Clone the repository and navigate to the project directory.
 Make sure you have a compatible Solidity compiler installed (e.g., version 0.8.0 or higher).
 Use your preferred Solidity development tool to deploy and interact with the smart contract.
+
 Disclaimer
+
 This repository is intended for educational purposes only. The error handling mechanisms demonstrated in the contract may not be suitable for all real-world scenarios. For production use, additional considerations and best practices must be followed to ensure robustness and security.
 
