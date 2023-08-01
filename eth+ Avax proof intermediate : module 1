@@ -1,0 +1,37 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract errorhandlingcontract {
+    address public owner;
+    uint256 public value;
+    uint256 public constant votingAge = 18;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function setValue(uint256 newValue) external {        
+        require(msg.sender == owner, "Only the contract owner can set the value");
+
+           value = newValue;
+    }
+
+    function checkEligibility(uint256 age) external pure {
+
+        if (age < votingAge) {
+            revert("You are not eligible to vote");
+        }
+        else
+        {
+            revert("You are eligible to vote ");
+        }
+
+    }
+
+    function division(uint256 x, uint256 y) external pure returns (uint256) {
+    
+    assert(y != 0);
+    return x / y;
+}
+}
+
